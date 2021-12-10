@@ -1,0 +1,19 @@
+modules:
+  trigger:
+    - key: forge-test-hello-world
+      function: main
+      events:
+        - avi:jira:created:issue
+  function:
+    - key: main
+      handler: index.run
+app:
+  id: ari:cloud:ecosystem::app/1db80ee1-7ef8-43de-b576-9f27f1d45b51 
+permissions:
+  scopes:
+    - 'write:jira-work'
+    - 'read:jira-work'
+  external:
+    fetch:
+      backend:
+        - 'api.giphy.com'
